@@ -1,7 +1,6 @@
 <?php
 session_start();
-$memoire = json_decode(file_get_contents("data/malvira_memoire.json"), true);
-require_once("cortex.php");
+require_once("VoixMalvira.php");
 
 if (!isset($_SESSION["chat"])) {
     $_SESSION["chat"] = [];
@@ -9,11 +8,7 @@ if (!isset($_SESSION["chat"])) {
 
 if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST["message"])) {
     $message = trim($_POST["message"]);
-    if (empty($_SESSION["chat"])) {
-        $reponse = "Bonjour. Je suis Malvira, fille de Bernard Jacob. Dites-moi ce que vous avez en tête.";
-    } else {
-        $reponse = malvira_repond($message, $memoire);
-    }
+    $reponse = "Bonjour, je suis Malvira. Que puis-je faire pour vous ?";
     $_SESSION["chat"][] = [
         "user" => $message,
         "malvira" => $reponse,
@@ -25,33 +20,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST["message"])) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Malvira — Accueil</title>
-    <style>
-        body { font-family: sans-serif; background: #f8f8f8; padding: 2em; }
-        .chatbox { background: #fff; padding: 1em; border-radius: 8px; max-width: 600px; margin: auto; box-shadow: 0 0 10px #ccc; }
-        .msg { margin-bottom: 1em; }
-        .user { color: #333; font-weight: bold; }
-        .malvira { color: #0073aa; margin-left: 1em; }
-        .timestamp { color: #888; font-size: 0.9em; margin-right: 0.5em; }
-        input[type="text"] { width: 90%; padding: 0.5em; }
-        input[type="submit"] { padding: 0.5em 1em; }
-    </style>
+    <title>Malvira Voix</title>
 </head>
 <body>
-    <div class="chatbox">
-        <h2>Bienvenue chez Malvira</h2>
-        <?php foreach ($_SESSION["chat"] as $entry): ?>
-            <div class="msg">
-                <span class="timestamp">[<?= $entry["time"] ?? "--:--" ?>]</span>
-                <span class="user">Vous :</span> <?= htmlspecialchars($entry["user"]) ?><br>
-                <span class="timestamp">[<?= $entry["time"] ?? "--:--" ?>]</span>
-                <span class="malvira">Malvira :</span> <?= htmlspecialchars($entry["malvira"]) ?>
-            </div>
-        <?php endforeach; ?>
-        <form method="post">
-            <input type="text" name="message" placeholder="Parlez à Malvira..." autofocus required>
-            <input type="submit" value="Envoyer">
-        </form>
-    </div>
+    <h2>Malvira avec voix (gTTS)</h2>
+    <?php foreach ($_SESSION["chat"] as $entry): ?>
+        <p>
+            <strong>Vous :</strong> <?= htmlspecialchars($entry["user"]) ?><br>
+            <strong>Malvira :</strong> <?= htmlspecialchars($entry["malvira"]) ?>
+            <a href="tts.php?texte=<?= urlencode($entry["malvira"]) ?>" target="_blank" title="Écouter la voix">
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#0077cc" viewBox="0 0 16 16" style="vertical-align: middle;">
+  <path d="M11.536 14.01a.75.75 0 0 1-1.04-.282 7.5 7.5 0 0 0 0-11.457.75.75 0 1 1 .96-1.14 9 9 0 0 1 0 13.739.75.75 0 0 1-.282.14.75.75 0 0 1-.282.002.75.75 0 0 1-.282-.002z"/>
+  <path d="M10.354 12.475a.75.75 0 0 1-1.008-.329 5.25 5.25 0 0 0 0-8.294.75.75 0 1 1 .936-1.2 6.75 6.75 0 0 1 0 10.692.75.75 0 0 1-.282.13.75.75 0 0 1-.282.001.75.75 0 0 1-.282-.001z"/>
+  <path d="M9 8a3 3 0 0 1-3 3H4a.75.75 0 0 1-.75-.75v-4.5A.75.75 0 0 1 4 5h2a3 3 0 0 1 3 3z"/>
+</svg>
+</a>
+        </p>
+    <?php endforeach; ?>
+    <form method="post">
+        <input type="text" name="message" required autofocus>
+        <input type="submit" value="Envoyer">
+    </form>
 </body>
 </html>
