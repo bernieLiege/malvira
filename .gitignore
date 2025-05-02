@@ -1,0 +1,19 @@
+# Exclure les fichiers de log et historiques utilisateurs
+data/log_malvira.json
+
+# Fichiers temporaires ou sensibles
+*.log
+*.tmp
+*.bak
+*.json
+
+# Systèmes d’exploitation
+.DS_Store
+Thumbs.db
+
+# Éventuels environnements de dev locaux
+.vscode/
+.idea/
+
+# Fichiers ZIP exportés
+*.zip
