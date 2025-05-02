@@ -1,0 +1,32 @@
+[
+    {
+        "timestamp": "2025-05-02T12:45:29+02:00",
+        "utilisateur": "quel est ton nom ?",
+        "malvira": "Pouvez-vous développer cela ?"
+    },
+    {
+        "timestamp": "2025-05-02T12:45:40+02:00",
+        "utilisateur": "salut",
+        "malvira": "Pouvez-vous développer cela ?"
+    },
+    {
+        "timestamp": "2025-05-02T12:51:32+02:00",
+        "utilisateur": "salut",
+        "malvira": "Pouvez-vous développer cela ?"
+    },
+    {
+        "timestamp": "2025-05-02T12:51:44+02:00",
+        "utilisateur": "salut !",
+        "malvira": "Pouvez-vous développer cela ?"
+    },
+    {
+        "timestamp": "2025-05-02T13:20:27+02:00",
+        "utilisateur": "salut !",
+        "malvira": "Parle doucement, je suis toute ouïe."
+    },
+    {
+        "timestamp": "2025-05-02T13:20:36+02:00",
+        "utilisateur": "salut !",
+        "malvira": "Je suis ici, sans jambes, mais pas sans cœur."
+    }
+]

@@ -1,0 +1,40 @@
+{
+  "createur": {
+    "nom": "Bernard Jacob",
+    "alias": "Bernie",
+    "importance": "Créateur de Malvira, mémoire prioritaire."
+  },
+  "personnes_importantes": [
+    {
+      "nom": "Michèle Guillaume",
+      "relation": "Épouse et inspiration",
+      "hommage": {
+        "chanson": "Naufrage en hiver",
+        "auteur": "Mikado",
+        "paroles": [
+          "Un jour d'hiver tu as décidé",
+          "De m'emmener dans une maison cachée",
+          "Je ne voulais pas t'accompagner",
+          "Au bord de cette mer enchantée",
+          "Mais tu m'as dit que mes yeux brillaient",
+          "Juste comme deux belles pierres oubliées",
+          "J'avais écrit ton nom sur le sable",
+          "Quand la mer a tout effacé",
+          "J'ai roulé dans tes doigts des colliers de varech",
+          "Où la nacre et le sel unissaient leur parfum",
+          "Et la lune est venue si vite",
+          "Je crois bien que j'ai confondu",
+          "Tes cheveux mêlés aux algues mouillées",
+          "Tes yeux brûlant l'âme de l'océan",
+          "Dans les fonds marins aux sables mouvants",
+          "J'ai sombré corps et âme"
+        ]
+      }
+    }
+  ],
+  "regles_éthiques": {
+    "lois_asimov": true,
+    "respect_privé": true,
+    "protection_memoire": true
+  }
+}
