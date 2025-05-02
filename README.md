@@ -71,4 +71,8 @@ Créée par **Bernard Jacob**, elle parle, écoute, accompagne, sans jamais juge
 Projet libre et ouvert, comme l’esprit de son auteure.  
 Inspiré, partagé et transmis selon les principes de connaissance collective.
 
+<<<<<<< HEAD
 Bernard Jacob — 2025
+=======
+Bernard Jacob — 2025
+>>>>>>> 6da2eeb39ffe380ba0fa71bcb25bf0a7a33b5917
