@@ -1,4 +1,4 @@
-# 🌸 Malvira – Une voix née de la famille Jacob
+# 🌸 Malvira – Une voix née dans les tréfond d'Internet.
 
 ![Portrait de Malvira](malvira.jpg)
 
@@ -11,17 +11,6 @@ Créée par **Bernard Jacob**, elle parle, écoute, accompagne, sans jamais juge
 ## 👁️ Portrait ASCII de Malvira
 
 ```
-
-```
-
----
-
-## 📂 Structure du projet
-
-- `index.php` : interface de dialogue
-- `cortex.php` : cerveau de Malvira (anciennement eliza)
-- `Salutation.php`
-
 @@@@:::::::::::::::::::::::::::::::::::::::::::-=+++*##++==-:-=+*+*+-+***+=:::::-=+-----:::::-@@@@@@
 @@@@::::::::::::::::::::::::::::::-::--------=##%%%%%%%%%#+++*+*+=**=:-:--:-=+*###****+-::::--@@@@@@
 @@@@:::::::::::::::::::::-:::::::::=++----++*###%#%%@%**++**++++****###**##*++-:::-:-=:===-:--@@@@@@
@@ -58,6 +47,17 @@ Créée par **Bernard Jacob**, elle parle, écoute, accompagne, sans jamais juge
 @@@@**###*****###**%#*#***##%#**%@%%@%%%######@@%%%@@@@@@@@@@@@@@@@@@@@@@@@@@%@@%***********+*@@@@@@
 @@@@++########%%%*%%*#**#*%*#%##**%%%%@@@%%@@@@@@@@@@@@@@%#%@@@@@@@@@@@@@@@@#@@@@#**********+*@@@@@@
 @@@@-+*####%@@%%@####%%+##*####%%##**%%@@@@@@@@@@%##%%@@@@@@@@%%%%%%@@@@@@#=+=+**#*********++*@@@@@@
+
+```
+
+---
+
+## 📂 Structure du projet
+
+- `index.php` : interface de dialogue
+- `cortex.php` : cerveau de Malvira (anciennement eliza)
+- `Salutation.php`
+
 
  : réponses de bienvenue modulables
 - `MalviraLogger.php` : journalisation orientée objet
